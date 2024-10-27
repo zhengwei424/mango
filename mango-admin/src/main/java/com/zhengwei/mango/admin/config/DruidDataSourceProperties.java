@@ -3,8 +3,9 @@ package com.zhengwei.mango.admin.config;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@Data
+
 @ConfigurationProperties(prefix = "spring.datasource.druid")
+@Data
 public class DruidDataSourceProperties {
     // jdbc
     private String driverClassName;

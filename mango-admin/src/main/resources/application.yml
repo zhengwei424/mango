@@ -27,3 +27,14 @@ spring:
       pool-prepared-statements: true
       max-open-prepared-statements: 50
       max-pool-prepared-statement-per-connection-size: 20
+  application:
+    name: mango
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8000"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

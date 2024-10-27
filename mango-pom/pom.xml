@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.zhengwei</groupId>
+    <groupId>com.zhengwei</groupId>
     <artifactId>mango-pom</artifactId>
     <version>${project.version}</version>
     <name>mango-pom</name>
@@ -32,5 +32,7 @@
         <module>../mango-admin</module>
         <module>../mango-common</module>
         <module>../mango-core</module>
+        <module>../mango-backup</module>
+        <module>../mango-monitor</module>
     </modules>
 </project>

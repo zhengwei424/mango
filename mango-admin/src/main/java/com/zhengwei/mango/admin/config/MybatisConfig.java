@@ -11,7 +11,7 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import javax.sql.DataSource;
 
 @Configuration
-@MapperScan("com.zhengwei.mango.admin.**.dao")
+@MapperScan("com.zhengwei.mango.admin.dao")
 public class MybatisConfig {
     @Autowired
     private DataSource dataSource;
@@ -21,7 +21,7 @@ public class MybatisConfig {
         SqlSessionFactoryBean sqlSessionFactory = new SqlSessionFactoryBean();
         sqlSessionFactory.setDataSource(dataSource);
         // 扫描model
-        sqlSessionFactory.setTypeAliasesPackage("com.zhengwei.mango.admin.**.model");
+        sqlSessionFactory.setTypeAliasesPackage("com.zhengwei.mango.admin.model");
 
         PathMatchingResourcePatternResolver resolver = new PathMatchingResourcePatternResolver();
         // 扫描映射文件

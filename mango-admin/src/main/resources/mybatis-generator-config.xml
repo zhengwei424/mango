@@ -62,7 +62,12 @@
         </table>
         <table schema="" tableName="sys_user" domainObjectName="SysUser"
                enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
-               enableUpdateByExample="false" selectByExampleQueryId="false"></table>
+               enableUpdateByExample="false" selectByExampleQueryId="false">
+        </table>
+        <table schema="" tableName="sys_user_role" domainObjectName="SysUserRole"
+               enableCountByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               enableUpdateByExample="false" selectByExampleQueryId="false">
+        </table>
 
     </context>
 </generatorConfiguration>

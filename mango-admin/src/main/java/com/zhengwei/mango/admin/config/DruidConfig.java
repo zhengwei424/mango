@@ -20,7 +20,7 @@ import java.sql.SQLException;
 @EnableConfigurationProperties({com.zhengwei.mango.admin.config.DruidDataSourceProperties.class})
 public class DruidConfig {
     @Autowired
-    private com.zhengwei.mango.admin.config.DruidDataSourceProperties properties;
+    private DruidDataSourceProperties properties;
 
     @Bean
     @ConditionalOnMissingBean

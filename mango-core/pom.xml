@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.zhengwei</groupId>
+    <groupId>com.zhengwei</groupId>
     <artifactId>mango-core</artifactId>
     <version>1.0.0</version>
     <name>mango-core</name>
@@ -19,9 +19,21 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.zhengwei</groupId>
+            <groupId>com.zhengwei</groupId>
             <artifactId>mango-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.20</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.pagehelper</groupId>
+            <artifactId>pagehelper-spring-boot-starter</artifactId>
+            <version>1.2.5</version>
+        </dependency>
+
+
     </dependencies>
 </project>

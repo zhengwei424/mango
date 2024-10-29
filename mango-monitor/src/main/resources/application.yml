@@ -3,3 +3,7 @@ server:
 spring:
   application:
     name: mango-monitor
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/

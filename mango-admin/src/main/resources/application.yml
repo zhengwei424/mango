@@ -28,7 +28,7 @@ spring:
       max-open-prepared-statements: 50
       max-pool-prepared-statement-per-connection-size: 20
   application:
-    name: mango
+    name: mango-admin
   boot:
     admin:
       client:

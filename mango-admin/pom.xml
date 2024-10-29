@@ -13,7 +13,6 @@
     <version>1.0.0</version>
     <name>mango-admin</name>
     <description>mango-admin</description>
-    <url/>
     <licenses>
         <license/>
     </licenses>
@@ -38,11 +37,11 @@
             <version>2.1.1.RELEASE</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-test</artifactId>-->
+        <!--            <scope>test</scope>-->
+        <!--        </dependency>-->
         <!-- swagger -->
         <dependency>
             <groupId>io.springfox</groupId>
@@ -96,7 +95,6 @@
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
         </dependency>
-
 
 
         <dependency>

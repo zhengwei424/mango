@@ -1,8 +1,8 @@
 server:
-  port: 8004
+  port: 8005
 spring:
   application:
-    name: mango-producer
+    name: mango-consumer
 eureka:
   client:
     service-url:

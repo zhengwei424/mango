@@ -4,19 +4,26 @@ server:
 spring:
   application:
     name: mango-backup
-  boot:
-    admin:
-      client:
-        url: "http://localhost:8000"
+#  boot:
+#    admin:
+#      client:
+#        url: "http://localhost:8000"
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      show-details: always
 eureka:
   client:
     service-url:
       defaultZone: http://localhost:7001/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    health-check-url-path: /actuator/health
 # backup store
 backup:
   datasource:

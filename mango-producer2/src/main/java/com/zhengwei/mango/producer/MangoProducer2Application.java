@@ -1,16 +1,13 @@
-package com.zhengwei.mango.admin;
+package com.zhengwei.mango.producer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
-//@EnableEurekaClient
-@SpringBootApplication(scanBasePackages = {"com.zhengwei.mango.admin"})
-public class MangoAdminApplication {
-
+@SpringBootApplication
+public class MangoProducer2Application {
     public static void main(String[] args) {
-        SpringApplication.run(MangoAdminApplication.class, args);
+        SpringApplication.run(MangoProducer2Application.class, args);
     }
-
 }

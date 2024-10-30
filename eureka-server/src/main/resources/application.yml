@@ -4,8 +4,14 @@ server:
 eureka:
   instance:
     hostname: localhost
+#    prefer-ip-address: true
+#    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
     registerWithEureka: false
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+  server:
+    enable-self-preservation: false # 关闭自我保护模式
+    eviction-interval-timer-in-ms: 4000 # 去除失效服务的时间间隔
+

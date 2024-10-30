@@ -1,8 +1,8 @@
 server:
-  port: 8000
+  port: 8004
 spring:
   application:
-    name: mango-monitor
+    name: mango-producer2
 eureka:
   client:
     service-url:
@@ -12,6 +12,10 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     health-check-url-path: /actuator/health
 management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
   endpoint:
     health:
       show-details: always

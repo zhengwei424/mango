@@ -1,0 +1,29 @@
+server:
+  port: 8010
+spring:
+  application:
+    name: mango-zuul
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    health-check-url-path: /actuator/health
+management:
+  endpoint:
+    health:
+      show-details: always
+#zuul:
+#  # 可以配置接口前缀
+#  prefix: /v1
+#  routes:
+#    # 转发到/ribbon
+#    ribbon:
+#      path: /ribbon/**
+#      serviceId: mango-consumer
+#    # 转发到/feign
+#    feign:
+#      path: /feign/**
+#      serviceId: mango-consumer

@@ -11,5 +11,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface MangoProducerService {
 
     @RequestMapping("/hello")
-    public String hello();
+    String hello();
 }

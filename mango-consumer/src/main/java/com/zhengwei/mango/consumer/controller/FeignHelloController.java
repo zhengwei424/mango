@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class FeignHelloController {
 
     @Autowired
+// @Qualifier("com.zhengwei.mango.consumer.service.MangoProducerService")
     private MangoProducerService mangoProducerService;
 
     @RequestMapping("/feign/call")

@@ -1,0 +1,22 @@
+server:
+  port: 8501
+spring:
+  application:
+    name: mango-hystrix
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:7001/eureka/
+    registry-fetch-interval-seconds: 5
+  instance:
+    lease-renewal-interval-in-seconds: 10
+    health-check-url-path: /actuator/health
+management:
+  endpoint:
+    health:
+      show-details: always
+turbine:
+  # 指定要聚合的服务，用逗号分隔
+  app-config: "mongo-consumer"
+  cluster-name-expression: "'default'"
+  combine-host-port: true

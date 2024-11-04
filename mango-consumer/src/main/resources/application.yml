@@ -3,6 +3,12 @@ server:
 spring:
   application:
     name: mango-consumer
+  zipkin:
+    base-url: http://192.168.10.130:9411
+  # 链路追踪
+  sleuth:
+    sampler:
+      probability: 1
 eureka:
   client:
     service-url:

@@ -1,9 +1,8 @@
 server:
-  port: 8003
+  port: 8004
 spring:
   application:
     name: mango-producer
-
 eureka:
   client:
     service-url:
@@ -20,15 +19,3 @@ management:
   endpoint:
     health:
       show-details: always
-app:
-  id: mango-producer
-apollo:
-  cluster: default
-  cacheDir: /opt/data
-  meta: http://192.168.10.130:8080
-  autoUpdateInjectedSpringProperties: true
-  bootstrap:
-    enable: true
-    namespaces: application
-    eagerLoad:
-      enable: true

@@ -4,6 +4,7 @@ import com.zhengwei.mango.admin.util.SecurityUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.web.authentication.www.BasicAuthenticationFilter;
+import org.springframework.stereotype.Service;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -14,6 +15,7 @@ import java.io.IOException;
 /**
  * 登录认证过滤器
  */
+@Service
 public class JwtAuthenticationFilter extends BasicAuthenticationFilter {
     @Autowired
     public JwtAuthenticationFilter(AuthenticationManager authenticationManager) {

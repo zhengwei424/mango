@@ -1,16 +1,16 @@
 package com.zhengwei.mango.admin.service.impl;
 
+import com.zhengwei.mango.admin.constant.SysConstants;
 import com.zhengwei.mango.admin.dao.SysMenuMapper;
 import com.zhengwei.mango.admin.model.SysMenu;
 import com.zhengwei.mango.admin.service.SysMenuService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 import com.zhengwei.mango.core.page.MybatisPageHelper;
 import com.zhengwei.mango.core.page.PageRequest;
 import com.zhengwei.mango.core.page.PageResult;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -72,8 +72,11 @@ public class SysMenuServiceImpl implements SysMenuService {
     }
 
     @Override
-    public List<SysMenu> findByUser(String username) {
-        return Collections.emptyList();
+    public List<SysMenu> findByUser(String userName) {
+        if(userName == null || userName.isEmpty() || SysConstants.ADMIN.equalsIgnoreCase(userName)) {
+            return sysMenuMapper.findAll();
+        }
+        return sysMenuMapper.findByUserName(userName);
     }
 
 
@@ -85,7 +88,7 @@ public class SysMenuServiceImpl implements SysMenuService {
                     // 如果是获取类型不需要按钮，且菜单类型是按钮的，直接过滤掉
                     continue;
                 }
-                if (sysMenu.getId().equals(menu.getId())) {
+                if (sysMenu.getId() != null && sysMenu.getId().equals(menu.getParentId())) {
                     menu.setParentName(sysMenu.getName());
                     menu.setLevel(sysMenu.getLevel() + 1);
                     if (!exists(sysMenus, menu)) {

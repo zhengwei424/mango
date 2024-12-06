@@ -5,7 +5,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 
 @EnableDiscoveryClient
-//@EnableEurekaClient
 @SpringBootApplication(scanBasePackages = {"com.zhengwei.mango.admin"})
 public class MangoAdminApplication {
 

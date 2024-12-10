@@ -48,7 +48,7 @@ public class SysLoginLogServiceImpl implements SysLoginLogService {
         Object status = pageRequest.getParam("status");
 
         if (username != null) {
-            return MybatisPageHelper.findPage(pageRequest, sysLoginLogMapper, "findPageByUsername", username);
+            return MybatisPageHelper.findPage(pageRequest, sysLoginLogMapper, "findPageByUserName", username);
         }
 
         if (status != null) {

@@ -54,3 +54,4 @@ eureka:
     health-check-url-path: /actuator/health
 server:
   port: 8001
+

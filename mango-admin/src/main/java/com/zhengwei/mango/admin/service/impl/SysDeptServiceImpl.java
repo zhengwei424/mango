@@ -71,7 +71,7 @@ public class SysDeptServiceImpl implements SysDeptService {
             List<SysDept> children = new ArrayList<>();
             for (SysDept dept : depts) {
                 if (sysDept.getId() != null && sysDept.getId().equals(dept.getParentId())) {
-                    dept.setParentName(dept.getName());
+                    dept.setParentName(findById(dept.getParentId()).getName());
                     dept.setLevel(sysDept.getLevel() + 1);
                     children.add(dept);
                 }
